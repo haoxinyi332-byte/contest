@@ -29,8 +29,6 @@ def select_victim(wafers, state):
         if total_cost < min_cost:
             min_cost = total_cost
             selected = wid
-
-    # 记录调试信息
     with state.mutex_print:
         if selected:
             print(f"Selected victim wafer {selected} with cost {min_cost:.2f}")
